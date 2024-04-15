@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <input type="text" placeholder="Enter First Value">
+    <input type="text" placeholder="Enter second Value">
+    <select name="select" id="">
+        <option value="">Select</option>
+        <option value="+">ADD</option>
+        <option value="-">SUBTRACT</option> 
+        <option value="*">MULTIPLY</option>
+        <option value="/">DIVIDE</option>
+    </select>
+    <button>Calculate</button>
+    <p></p>
+<!-- 
+    <input type="text" placeholder="Select first number">
+    <input type="text" placeholder="Select second number">
+    <select name="" id="">
+        <option value="">Select</option>
+        <option value="+">ADD</option>
+        <option value="-">Subtract</option>
+        <option value="/">Divide</option>
+        <option value="*">Multiply</option>
+    </select>
+    <button>Calculate</button>
+    <p></p> -->
+
+
+        <!-- <textarea name="" placeholder="Whats on your mind" id="" cols="30" rows="10"></textarea>
+        <p></p> -->
+    <script>
+        var fname=document.querySelector("input:first-of-type")
+        var sname=document.querySelector("input:last-of-type")
+        var select=document.querySelector("select")
+        var btn=document.querySelector("button")
+        var output=document.querySelector("p")
+
+        btn.addEventListener("click",click())
+        function click()
+        {
+            console.log("srishty")
+        }
+
+        btn.addEventListener("click",()=>{
+           
+            var fn=fname.value;
+            var sn=sname.value;
+            if(select.value==="+")
+        {
+            output.innerText= Number(fn)+Number(sn)
+        }
+        else if (select.value==="-")
+        {
+            output.innerText= Number(fn)-Number(sn)
+
+        }
+        else if (select.value==="*")
+        {
+            output.innerText= Number(fn)*Number(sn)
+            
+        }
+        else if (select.value==="/")
+        {
+            output.innerText=Number(fn)/Number(sn)
+            
+        }
+        })
+
+
+        // SECOND METHOD 
+
+        var fnum=document.querySelectorAll("input")[0]
+        var snum=document.querySelectorAll("input")[1]
+        var select=document.querySelector("select")
+        var output=document.querySelector("p")
+        var btn=document.querySelector("button")
+
+        btn.addEventListener("click",()=>{
+            var fn= fnum.value;
+            var sn=snum.value;
+            
+            if(select.value==="+")
+            {
+                output.innerText=fn+sn
+            }
+            else if(select.value==="-")
+            {
+                output.innerText=fn-sn
+            }
+            else if(select.value==="/")
+            {
+                output.innerText=fn/sn
+            }
+            else if(select.value==="*")
+            {
+                output.innerText=fn*sn
+            }
+        })
+        //     var textarea= document.querySelector("textarea")
+        //     var output=document.querySelector("p")
+
+        //     textarea.addEventListener("keyup",()=>
+        // {
+        //     // console.log("srishty")
+        //     output.innerText = textarea.value
+        // })
+
+    </script>
+</body>
+</html>
